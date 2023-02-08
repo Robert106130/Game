@@ -9,6 +9,12 @@ def draw():
     bootl.draw()
 
 def update():
-    bootl.left + bootl.left + 2
+    bootl.left += 2
     if bootl.left > Width:
         bootl.right = 0
+
+def on_mouse_down(pos):
+    if bootl.collidepoint(pos):
+        print("Eek!")
+    else:
+        print("You missed me!")
